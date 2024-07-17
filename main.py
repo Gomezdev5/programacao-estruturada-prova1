@@ -49,11 +49,11 @@ def q3():
     if soma1 > 10000:
         print("O custo total mensal está acima do limite.")
     else:
-        print("O custo total mensal estimado para a infraestrutura é de R$","{:.2f}".format(soma1))
+        print("O custo total mensal estimado para a infraestrutura é de R$",f"{soma1:.2f}.")
 
     
 def q4():
-    N = int(input("Digite seu numero "))
+    N = int(input("Digita um numero"))
     soma3 = 0.0
     termos = []
 
@@ -65,10 +65,6 @@ def q4():
         termos.append(f"{numerador}/{denominador}")
 
     termos_str = " + ".join(termos)
-    soma_formatada = f"{soma3:.2f}"
     print(termos_str)
-    print(soma_formatada)
+    print(f"{soma3:.2f}")
 
-
-
-q4()
