@@ -53,4 +53,22 @@ def q3():
 
     
 def q4():
-    pass
+    N = int(input("Digite seu numero "))
+    soma3 = 0.0
+    termos = []
+
+    for i in range(1, N+1):
+        numerador = i
+        denominador = 3 * i
+        termo = numerador / denominador
+        soma3 += termo
+        termos.append(f"{numerador}/{denominador}")
+
+    termos_str = " + ".join(termos)
+    soma_formatada = f"{soma3:.2f}"
+    print(termos_str)
+    print(soma_formatada)
+
+
+
+q4()
