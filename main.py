@@ -29,7 +29,28 @@ def q2():
     print(soma)
 
 def q3():
-    pass
+    n_servidores = int(input("Número de servidores:"))
+    n__und_capacidade = int(input("Unidades de capacidade do banco de dados:"))
+    n_armazenamento_dados = int(input("Armazenamento de dados (em GB):"))
+    n_dados_de_entrada_saida = int(input("Transferência de dados de entrada e saída (em GB):"))
 
+    servidor = 500
+    unidade_capacidade = 100
+    armazenamento_dados_GB = 0.10
+    trans_dado = 0.05
+
+    custo_servidores = n_servidores * servidor
+    custo_capacidade = n__und_capacidade * unidade_capacidade
+    custo_armazenamento = n_armazenamento_dados * armazenamento_dados_GB
+    custo_trans_dados = n_dados_de_entrada_saida * trans_dado
+
+    soma1 = float(custo_armazenamento+custo_capacidade+custo_servidores+custo_trans_dados)
+    
+    if soma1 > 10000:
+        print("O custo total mensal está acima do limite.")
+    else:
+        print("O custo total mensal estimado para a infraestrutura é de R$","{:.2f}".format(soma1))
+
+    
 def q4():
     pass
